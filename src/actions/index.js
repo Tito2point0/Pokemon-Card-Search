@@ -7,7 +7,7 @@ export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
 export const FETCH_POKEMON_FAILURE = 'FETCH_POKEMON_FAILURE';
 
 // Hardcoded API key for testing (replace with your actual key)
-// const apiKey = 'ba66f255-0f49-4d14-ac3e-088d3d39044e';  // Replace 'your_api_key_here' with your API key
+const apiKey = '72f0f795-1041-499f-a707-26c42a5dc7ea'   // Replace 'your_api_key_here' with your API key
 
 export const fetchPokemonRequest = () => ({
   type: FETCH_POKEMON_REQUEST,
@@ -31,9 +31,9 @@ export const fetchPokemon = (searchTerm) => {
     // Make the API request using Axios with the hardcoded API key
     axios
       .get(`https://api.pokemontcg.io/v2/cards?q=name:${searchTerm}`, {
-        // headers: {
-        //   'X-Api-Key': apiKey,
-        // },
+        headers: {
+          'X-Api-Key': apiKey,
+        },
       })
       .then((response) => {
         // Assuming the API response contains the Pokemon data
