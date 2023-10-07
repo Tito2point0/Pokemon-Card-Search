@@ -7,7 +7,7 @@ import SearchPage from './Routes/SearchPage'; // Import the new SearchPage compo
 import { connect } from 'react-redux';
 import { fetchPokemon } from './actions'; 
 import HomePage from './Routes/HomePage';
-function App(props) {
+function App() {
   return (
     <Router>
       <div className="App">

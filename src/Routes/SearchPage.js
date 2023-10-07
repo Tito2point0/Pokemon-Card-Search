@@ -16,7 +16,11 @@ function SearchPage(props) {
 
   return (
     <div className="App">
-      <h1 className='heading1'>Pokemon Card Finder!!</h1>
+          <h1 className='heading1'>
+              <div className='subheading1'>
+                  Pokemon Search
+              </div>
+      </h1>
       <PokeSearchForm />
       {loading ? <h3> Gotta Load em all</h3> : <PokeList />}
     </div>

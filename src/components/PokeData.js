@@ -8,12 +8,12 @@ const PokeData = ({ pokemons }) => {
       <p>Supertype: {pokemons.supertype}</p>
       <p>Level: {pokemons.level}</p>
       <p>HP: {pokemons.hp}</p>
-      <p>Type: {pokemons.types.join(", ")}</p>
+      {/* <p>Type: {pokemons.types.join(", ")}</p>
 
-      {pokemons.subtypes && <p>Subtypes: {pokemons.subtypes.join(", ")}</p>}
+      {pokemons.subtypes && <p>Subtypes: {pokemons.subtypes.join(", ")}</p>} */}
 
       {pokemons.abilities && (
-        <div>
+        <div className="container">
           <h4>Abilities:</h4>
           <ul>
             {pokemons.abilities.map((ability, index) => (
@@ -31,7 +31,7 @@ const PokeData = ({ pokemons }) => {
       )}
 
       {pokemons.attacks && (
-        <div>
+        <div className="container">
           <h4>Attacks:</h4>
           <ul>
             {pokemons.attacks.map((attack, index) => (
@@ -54,7 +54,7 @@ const PokeData = ({ pokemons }) => {
       )}
 
       {pokemons.weaknesses && (
-        <div>
+        <div className="container">
           <h4>Weaknesses:</h4>
           <ul>
             {pokemons.weaknesses.map((weakness, index) => (
@@ -70,7 +70,7 @@ const PokeData = ({ pokemons }) => {
       )}
 
       {pokemons.resistances && (
-        <div>
+        <div className="container">
           <h4>Resistances:</h4>
           <ul>
             {pokemons.resistances.map((resistance, index) => (
@@ -86,18 +86,20 @@ const PokeData = ({ pokemons }) => {
       )}
 
       {pokemons.retreatCost && (
-        <p>Retreat Cost: {pokemons.retreatCost.join(", ")}</p>
+        <p className="section">Retreat Cost: {pokemons.retreatCost.join(", ")}</p>
       )}
 
       {pokemons.set && (
-        <div>
+        <div className="container">
           <h4>Set Details:</h4>
           <p>ID: {pokemons.set.id}</p>
           <p>Name: {pokemons.set.name}</p>
           <p>Series: {pokemons.set.series}</p>
           <p>Release Date: {pokemons.set.releaseDate}</p>
+           <div className="icon">
           <img src={pokemons.set.images.symbol} alt="Set Symbol" />
-          <img src={pokemons.set.images.logo} alt="Set Logo" />
+            <img src={pokemons.set.images.logo} alt="Set Logo" />
+          </div>
         </div>
       )}
 
@@ -106,7 +108,7 @@ const PokeData = ({ pokemons }) => {
       {pokemons.flavorText && <p>Flavor Text: {pokemons.flavorText}</p>}
 
       {pokemons.nationalPokedexNumbers && (
-        <div>
+        <div className="container">
           <h4>National Pokedex Numbers:</h4>
           <ul>
             {pokemons.nationalPokedexNumbers.map((number, index) => (
@@ -117,7 +119,7 @@ const PokeData = ({ pokemons }) => {
       )}
 
       {pokemons.legalities && (
-        <div>
+        <div className="container">
           <h4>Legalities:</h4>
           <p>Unlimited: {pokemons.legalities.unlimited}</p>
         </div>
@@ -141,7 +143,7 @@ const PokeData = ({ pokemons }) => {
       )} */}
 
       {pokemons.cardmarket && (
-        <div>
+        <div className="container">
           <h4>CardMarket Data:</h4>
           <p>URL: {pokemons.cardmarket.url}</p>
           <p>Updated At: {pokemons.cardmarket.updatedAt}</p>
