@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css';
 import './index.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SearchPage from './Routes/SearchPage'; // Import the new SearchPage component
 import { connect } from 'react-redux';
 import { fetchPokemon } from './actions'; 
@@ -11,8 +11,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-          <Route path="/" exact component={HomePage} />
-          <Route path="/search" exact component={SearchPage}/>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/search" element={<SearchPage/>} />
+        </Routes>
       </div>
     </Router>
   );
