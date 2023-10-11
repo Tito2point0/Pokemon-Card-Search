@@ -7,8 +7,9 @@ module.exports = {
   output: {
     filename: 'index.js',
     publicPath: '/',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'), // <-- Change 'dist' to 'build'
   },
+  
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
