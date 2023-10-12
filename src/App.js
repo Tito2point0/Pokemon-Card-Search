@@ -11,10 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/search" element={<SearchPage/>} />
-        </Routes>
+          <Route path="/"  element={<HomePage/>} />
+          <Route path="/search" element={<SearchPage/>}/>
       </div>
     </Router>
   );
